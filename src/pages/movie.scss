@@ -1,0 +1,134 @@
+.movie {
+  height: calc(100vh - 42px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-y: auto;
+
+  &__dark-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.55;
+  }
+
+  >.ant-row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__poster {
+    height: 70%;
+    margin-left: 2em;
+    margin-top: 1em;
+
+    @keyframes zoom {
+
+      /* Estado inicial: tamaño original */
+      0% {
+        transform: scale(1);
+      }
+
+      /* Estado intermedio: tamaño aumentado en un 20% */
+      50% {
+        transform: scale(1.2);
+      }
+
+      /* Estado final: tamaño original */
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    animation: zoom 10s ease-in-out infinite;
+    /* Transición suave de 0.3 segundos */
+    transition: transform 0.3s;
+
+    div {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__info {
+    height: 70%;
+    color: white;
+    margin-left: 2em;
+    margin-top: -5;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h1 {
+        color: white;
+        margin: 0;
+        font-size: 50px;
+        text-align: center;
+
+        span {
+          font-size: 26px;
+          margin-left: 10px;
+          opacity: 0.5;
+        }
+      }
+
+    }
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: 0;
+      font-size: 25px;
+      margin-top: 1em;
+      margin-left: 7em;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        color: turquoise;
+      }
+    }
+
+    &-content {
+      margin-top: 1.7em;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: white;
+        font-weight: norm;
+        font-size: 26px;
+      }
+
+      &__description {
+        margin-top: -0.7em;
+        margin-bottom: 0em;
+        font-size: 18px;
+        line-height: 1.35;
+      }
+
+      ul {
+        margin-top: -1em;
+        font-size: 18px;
+
+        li {
+          width: max-content;
+        }
+
+        li:last-child {
+          padding-bottom: 1em;
+        }
+      }
+
+    }
+  }
+}
