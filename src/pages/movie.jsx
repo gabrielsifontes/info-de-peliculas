@@ -82,7 +82,7 @@ function RenderMovie({
       <div className="movie__dark-element"></div>
 
 
-      <Row>
+      <Row style={{marginBottom: "3em"}}>
         {/* Poster */}
         <Col 
           className="movie__poster"
@@ -131,6 +131,7 @@ function RenderMovie({
         </Col>
 
       </Row>
+
     </div>
   )
 }

@@ -7,7 +7,6 @@ import Footer from "../components/Footer"
 
 import useFetch from "../hooks/useFetch"
 import { URL_API, API } from "../utils/contants"
-import "./home.scss"
 
 
 

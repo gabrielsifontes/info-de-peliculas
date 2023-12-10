@@ -9,6 +9,13 @@ body {
 
 }
 
+.home,
+.new-movies,
+.search {
+  height: calc(100vh - 42px);
+  overflow-y: scroll;
+}
+
 // :root {
 //   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 //   line-height: 1.5;

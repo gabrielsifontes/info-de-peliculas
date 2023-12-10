@@ -29,9 +29,9 @@ export default function MovieList({
           <h2>{title}</h2>
         }
         bordered
-        dataSource={movies.result.results}
+        dataSource={movies.result.results} // Esto recibe un array
         renderItem={movie => 
-          <RenderMovie movie={movie} />
+          <RenderMovie movie={movie} /> // Esto hace algo con el array que se le paso en dataSource
         }
       />      
     )

@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <Footer className="footer">
-      <p>Sitio web en contrucción por Gabriel Sifontes, con idea de Agustín Navarro Galdón.</p>
+      <p>Proyecto hecho en 2023/12/10 por Gabriel Sifontes, con idea de Agustín Navarro Galdón.</p>
     </Footer>
   )
 }

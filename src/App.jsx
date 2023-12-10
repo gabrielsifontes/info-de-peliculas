@@ -1,11 +1,11 @@
 import { Layout } from 'antd' 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Páginas
 import Home from './pages/home' 
 import NewMovies from './pages/new-movies' 
 import Search from './pages/search' 
-import Popular from './pages/popular'
+import PopularMovies from './pages/popular'
 import Movie from './pages/movie'
 import Error404 from './pages/error404'
 
@@ -26,19 +26,37 @@ export default function App() {
         <Header>
           <MenuTop />
         </Header>
-        
+
         <Content>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/new-movies" element={<NewMovies />} />
-            <Route path="/popular" element={<Popular />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/movie/:id" element={<Movie />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
+          <Switch>
+            <Route path="/" exact={true}>
+              <Home />
+            </Route>
+
+            <Route path="/new-movies" exact={true}>
+              <NewMovies />
+            </Route>
+
+            <Route path="/popular" exact={true}>
+              <PopularMovies />
+            </Route>
+
+            <Route path="/search" exact={true}>
+              <Search />
+            </Route>
+
+            <Route path="/movie/:id" exact={true}>
+              <Movie />
+            </Route>
+
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>
         </Content>
       </Router>
-    </Layout>
+    </Layout>  
+
   ) 
 } 
  
